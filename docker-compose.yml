@@ -33,6 +33,9 @@ services:
     hostname: phpldapadmin
     ports: 
       - "80:80"
+    environment: 
+      - PHPLDAPADMIN_LDAP_HOSTS=openldap
+      - PHPLDAPADMIN_HTTPS=false
     depends_on:
       - openldap
     networks:
