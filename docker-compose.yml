@@ -24,6 +24,8 @@ services:
       - LDAP_READONLY_USER=true
       - LDAP_READONLY_USER_USERNAME=user1
       - LDAP_READONLY_USER_PASSWORD=Password123
+      - LDAP_READONLY_USER_USERNAME=user2
+      - LDAP_READONLY_USER_PASSWORD=Password123
     networks:
       - openldap
   
