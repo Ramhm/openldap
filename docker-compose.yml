@@ -12,18 +12,20 @@ services:
       - ./data/slapd/database:/var/lib/ldap
       - ./data/slapd/config:/etc/ldap/slapd.d
     environment: 
-      - LDAP_ORGANISATION=ramhlocal
-      - LDAP_DOMAIN=ramhlocal.com
+      - LDAP_ORGANISATION=canepros
+      - LDAP_DOMAIN=canepros.com
       - LDAP_ADMIN_USERNAME=admin
       - LDAP_ADMIN_PASSWORD=admin_pass
       - LDAP_CONFIG_PASSWORD=config_pass
-      - "LDAP_BASE_DN=dc=ramhlocal,dc=com"
+      - "LDAP_BASE_DN=dc=canepros,dc=com"
       - LDAP_TLS_CRT_FILENAME=server.crt
       - LDAP_TLS_KEY_FILENAME=server.key
-      - LDAP_TLS_CA_CRT_FILENAME=ramhlocal.com.ca.crt
+      - LDAP_TLS_CA_CRT_FILENAME=canepros.com.ca.crt
       - LDAP_READONLY_USER=true
-      - LDAP_READONLY_USER_USERNAME=user-ro
-      - LDAP_READONLY_USER_PASSWORD=ro_pass
+      - LDAP_READONLY_USER_USERNAME=user1
+      - LDAP_READONLY_USER_PASSWORD=Password123
+      - LDAP_READONLY_USER_USERNAME=user2
+      - LDAP_READONLY_USER_PASSWORD=Password123
     networks:
       - openldap
   
